@@ -10,7 +10,7 @@ module.exports = {
 		// @wordpress/scripts helper which generates entry points from any '**/block.json' in 'src'.
 		...wordpressConfig.entry(),
 		// 'example/output': './path/to/dir/entrypoint.js',
-		'js/bigup-blocks-editor': './src/js/bigup-blocks-editor.js',
+		'js/utility-blocks-editor': './src/js/utility-blocks-editor.js',
 		'third-party/js/gsap.min': './node_modules/gsap/dist/gsap.min.js',
 		'third-party/js/ScrollTrigger.min': './node_modules/gsap/dist/ScrollTrigger.min.js',
 	},

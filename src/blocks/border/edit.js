@@ -57,9 +57,9 @@ export default function Edit( props ) {
 				<Panel>
 					<PanelBody>
 						<SelectControl
-						label={ __( 'Select border', 'bigup-blocks' ) }
+						label={ __( 'Select border', 'utility-blocks' ) }
 						labelPosition="top"
-						title={ __( 'Select border', 'bigup-blocks' ) }
+						title={ __( 'Select border', 'utility-blocks' ) }
 						value={ variation }
 						options={ variationOptions }
 						onChange={ ( value ) => onChangeVariation( value ) }
@@ -69,20 +69,20 @@ export default function Edit( props ) {
 				</Panel>
 				<Panel>
 					<PanelBody>
-						<PanelRow><h2>{ __( 'Border Settings', 'bigup-blocks' ) }</h2></PanelRow>
-						<PanelRow>{ __( 'Colour', 'bigup-blocks' ) }</PanelRow>
+						<PanelRow><h2>{ __( 'Border Settings', 'utility-blocks' ) }</h2></PanelRow>
+						<PanelRow>{ __( 'Colour', 'utility-blocks' ) }</PanelRow>
 						<ColorPalette
 							value={ borderColour }
 							colors={ [ ...useSettings( 'color.palette' ) ] }
 							onChange={ ( value ) => setAttributes( { borderColour: value } ) }
 						/>
-						<PanelRow>{ __( 'Width', 'bigup-blocks' ) }</PanelRow>
+						<PanelRow>{ __( 'Width', 'utility-blocks' ) }</PanelRow>
 						<UnitControl
 							value={ borderWidth }
 							onChange={ ( value ) => setAttributes( { borderWidth: value } ) }
 							__next40pxDefaultSize
 						/>
-						<PanelRow>{ __( 'Colour', 'bigup-blocks' ) }</PanelRow>
+						<PanelRow>{ __( 'Colour', 'utility-blocks' ) }</PanelRow>
 					</PanelBody>
 				</Panel>
 			</InspectorControls>

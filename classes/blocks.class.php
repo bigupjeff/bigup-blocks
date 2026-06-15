@@ -1,10 +1,10 @@
 <?php
-namespace BigupWeb\Bigup_Blocks;
+namespace WebGuyJeff\Utility_Blocks;
 
 /**
  * Register blocks included with this theme.
  *
- * @package bigup-blocks
+ * @package utility-blocks
  */
 class Blocks {
 
@@ -22,7 +22,7 @@ class Blocks {
 	 * Setup the class.
 	 */
 	public function __construct() {
-		$this->blocks_abs_path = trailingslashit( BIGUPBLOCKS_PATH . self::BLOCKS_REL_PATH );
+		$this->blocks_abs_path = trailingslashit( UTILITYBLOCKS_PATH . self::BLOCKS_REL_PATH );
 
 		$all_children = scandir( $this->blocks_abs_path );
 		$dir_names    = array_filter( preg_replace( '/\..*/', '', $all_children ) );

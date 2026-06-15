@@ -21,7 +21,7 @@ export default function Edit( { attributes, setAttributes, media } ) {
 	} = attributes
 
 	const blockProps = useBlockProps( {
-		className: 'bigup__inlineSVG',
+		className: 'webguyjeff__inlineSVG',
 		style: { width: width, height: height }
 	} )
 
@@ -80,7 +80,7 @@ export default function Edit( { attributes, setAttributes, media } ) {
 			<InspectorControls>
 				<Panel>
 					<PanelBody
-						title={ __( 'Select SVG image', 'bigup-blocks' ) }
+						title={ __( 'Select SVG image', 'utility-blocks' ) }
 						initialOpen={ true }
 					>
 						<div className="editor-post-featured-image">
@@ -94,7 +94,7 @@ export default function Edit( { attributes, setAttributes, media } ) {
 											className={ mediaId == 0 ? 'editor-post-featured-image__toggle' : 'editor-post-featured-image__preview'}
 											onClick={ open }
 										>
-											{ mediaId == 0 && __( 'Choose an image', 'bigup-blocks' ) }
+											{ mediaId == 0 && __( 'Choose an image', 'utility-blocks' ) }
 											{ media != undefined && 
 												<ResponsiveWrapper
 													naturalWidth={ media.media_details.width }
@@ -110,7 +110,7 @@ export default function Edit( { attributes, setAttributes, media } ) {
 							{ mediaId != 0 && 
 								<MediaUploadCheck>
 									<MediaUpload
-										title={ __( 'Replace image', 'bigup-blocks' ) }
+										title={ __( 'Replace image', 'utility-blocks' ) }
 										value={ mediaId }
 										onSelect={ onSelectMedia }
 										allowedTypes={ [ 'image/svg+xml' ] }
@@ -118,7 +118,7 @@ export default function Edit( { attributes, setAttributes, media } ) {
 											<Button
 												onClick={ open }
 											>
-												{ __( 'Replace image', 'bigup-blocks') }
+												{ __( 'Replace image', 'utility-blocks') }
 											</Button>
 										) }
 									/>
@@ -129,7 +129,7 @@ export default function Edit( { attributes, setAttributes, media } ) {
 									<Button
 										onClick={ removeMedia }
 									>
-										{ __( 'Remove image', 'bigup-blocks' ) }
+										{ __( 'Remove image', 'utility-blocks' ) }
 									</Button>
 								</MediaUploadCheck>
 							}
@@ -138,16 +138,16 @@ export default function Edit( { attributes, setAttributes, media } ) {
 				</Panel>
 				<Panel>
 					<PanelBody
-						title={ __( 'Dimensions', 'bigup-blocks' ) }
+						title={ __( 'Dimensions', 'utility-blocks' ) }
 						initialOpen={ true }
 					>
-						<PanelRow>{ __( 'Width', 'bigup-blocks' ) }</PanelRow>
+						<PanelRow>{ __( 'Width', 'utility-blocks' ) }</PanelRow>
 						<UnitControl
 							value={ width }
 							onChange={ ( value ) => setAttributes( { width: value } ) }
 							__next40pxDefaultSize
 						/>
-						<PanelRow>{ __( 'Height', 'bigup-blocks' ) }</PanelRow>
+						<PanelRow>{ __( 'Height', 'utility-blocks' ) }</PanelRow>
 						<UnitControl
 							value={ height }
 							onChange={ ( value ) => setAttributes( { height: value } ) }
@@ -171,7 +171,7 @@ export default function Edit( { attributes, setAttributes, media } ) {
 					data-line-height={ height }
 				>
 					<p>{ '<SVG>' }</p>
-					<p>{ __( 'Select image', 'bigup-blocks' ) }</p>
+					<p>{ __( 'Select image', 'utility-blocks' ) }</p>
 				</div>
 			}
 		</>

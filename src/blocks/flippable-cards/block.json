@@ -1,6 +1,6 @@
 {
 	"apiVersion": 3,
-	"name": "bigup-blocks/flippable-cards",
+	"name": "utility-blocks/flippable-cards",
 	"version": "0.0.1",
 	"title": "Flippable Cards",
 	"category": "theme",
@@ -10,7 +10,7 @@
 		"container",
 		"group"
 	],
-	"textdomain": "bigup-blocks",
+	"textdomain": "utility-blocks",
 	"editorScript": "file:./flippable-cards.js",
 	"viewScript": "file:./flippable-cards-view.js",
 	"style": "file:./flippable-cards.css",
@@ -23,6 +23,6 @@
 		"align": [ "wide", "full" ]
 	},
 	"allowedBlocks": [
-		"bigup-blocks/flippable-card"
+		"utility-blocks/flippable-card"
 	]
 }

@@ -1,6 +1,6 @@
 {
   "apiVersion": 3,
-  "name": "bigup-blocks/social-links-gradient-fill",
+  "name": "utility-blocks/social-links-gradient-fill",
   "version": "0.0.1",
   "title": "Social Links Gradient Fill",
   "category": "widgets",
@@ -11,7 +11,7 @@
     "social",
     "gradient"
   ],
-  "textdomain": "bigup-blocks",
+  "textdomain": "utility-blocks",
   "editorScript": "file:./social-links-gradient-fill.js",
   "editorStyle": "file:./social-links-gradient-fill-editor.css",
   "style": "file:./social-links-gradient-fill.css",

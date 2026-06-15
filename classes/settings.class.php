@@ -1,19 +1,15 @@
 <?php
-namespace BigupWeb\Bigup_Blocks;
+namespace WebGuyJeff\Utility_Blocks;
 
 /**
  * Admin Settings Handler.
  *
- * @package bigup-blocks
- * @author Jefferson Real <me@jeffersonreal.uk>
- * @copyright Copyright (c) 2023, Jefferson Real
- * @license GPL3+
- * @link https://jeffersonreal.uk
+ * @package utility-blocks
  */
 
 
 /**
- * Bigup Blocks - Admin Settings.
+ * Utility Blocks - Admin Settings.
  *
  * Hook into the WP admin area and add menu settings pages.
  */
@@ -26,11 +22,11 @@ class Settings {
 	 * $admin_label - Menu label for the plugin.
 	 * $page_slug   - page URI where the sub-menu will be.
 	 * $group_name  - Option group ID which is set when registering settings for this page.
-	 * $icon        - SVG Bigup Web icon for the admin menu as a base64 string.
+	 * $icon        - SVG Web Guy Jeff icon for the admin menu as a base64 string.
 	 */
-	public $admin_label = 'Bigup Blocks';
-	public $page_slug   = 'bigup-blocks';
-	public $group_name  = 'bigup-blocks';
+	public $admin_label = 'Utility Blocks';
+	public $page_slug   = 'utility-blocks';
+	public $group_name  = 'utility-blocks';
 	private $parent_slug;
 
 	/**
@@ -92,12 +88,12 @@ class Settings {
 
 		<div class="wrap">
 			<h1>
-				<span class="dashicons-bigup-logo" style="font-size: 2em; margin-right: 0.2em;"></span>
+				<span class="dashicons-webguyjeff-logo" style="font-size: 2em; margin-right: 0.2em;"></span>
 				<?php echo esc_html( get_admin_page_title() ); ?>
 			</h1>
 
 			<p>
-				These settings control Bigup Blocks features.
+				These settings control Utility Blocks features.
 			</p>
 
 			<?php settings_errors(); // Display the form save notices here. ?>

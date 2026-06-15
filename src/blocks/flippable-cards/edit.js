@@ -14,9 +14,9 @@ import {
  */
 
 const template = [
-	[ 'bigup-blocks/flippable-card' ],
-	[ 'bigup-blocks/flippable-card' ],
-	[ 'bigup-blocks/flippable-card' ]
+	[ 'utility-blocks/flippable-card' ],
+	[ 'utility-blocks/flippable-card' ],
+	[ 'utility-blocks/flippable-card' ]
 ]
 
 export default function Edit() {

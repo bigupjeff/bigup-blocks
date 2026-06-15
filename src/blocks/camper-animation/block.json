@@ -1,6 +1,6 @@
 {
 	"apiVersion": 3,
-	"name": "bigup-blocks/camper-animation",
+	"name": "utility-blocks/camper-animation",
 	"version": "0.0.1",
 	"title": "Camper Animation",
 	"category": "theme",
@@ -11,7 +11,7 @@
 		"hero",
 		"animation"
 	],
-	"textdomain": "bigup-blocks",
+	"textdomain": "utility-blocks",
 	"editorScript": "file:./camper-animation.js",
 	"style": "file:./camper-animation.css",
 	"editorStyle": "file:./camper-animation-editor.css"

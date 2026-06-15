@@ -1,13 +1,13 @@
 {
 	"apiVersion": 3,
-	"name": "bigup-blocks/inline-svg",
+	"name": "utility-blocks/inline-svg",
 	"version": "0.0.1",
 	"title": "Inline SVG",
 	"category": "design",
 	"icon": "thumbs-up",
 	"description": "Insert SVG images as inline elements.",
 	"keywords": [ "svg", "inline", "image" ],
-	"textdomain": "bigup-blocks",
+	"textdomain": "utility-blocks",
 	"editorScript": "file:./inline-svg.js",
 	"editorStyle": "file:./inline-svg-editor.css",
 	"style": "file:./inline-svg.css",
@@ -27,14 +27,14 @@
 		"width": {
 			"type": "string",
 			"source": "attribute",
-			"selector": ".bigup__inlineSVG",
+			"selector": ".webguyjeff__inlineSVG",
         	"attribute": "data-line-width",
 			"default": "auto"
 		},
 		"height": {
 			"type": "string",
 			"source": "attribute",
-			"selector": ".bigup__inlineSVG",
+			"selector": ".webguyjeff__inlineSVG",
         	"attribute": "data-line-height",
 			"default": "auto"
 		}

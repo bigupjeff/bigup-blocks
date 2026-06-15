@@ -31,11 +31,11 @@ const template = [
 			layout: { type: 'constrained', contentSize: '30em', wideSize: '30em' }
 		},
 		[
-			[ 'core/heading', { level: 1, content: __( 'Title', 'bigup-blocks' ) } ],
-			[ 'core/paragraph', { content: __( 'Some awesome content to alert the masses of this awesome thing!', 'bigup-blocks' ) } ],
+			[ 'core/heading', { level: 1, content: __( 'Title', 'utility-blocks' ) } ],
+			[ 'core/paragraph', { content: __( 'Some awesome content to alert the masses of this awesome thing!', 'utility-blocks' ) } ],
 			[ 'core/buttons', { layout: { type: 'flex', justifyContent: 'center' } },
 				[
-					[ 'core/button', { text: __( 'Do button stuff', 'bigup-blocks' )	} ]
+					[ 'core/button', { text: __( 'Do button stuff', 'utility-blocks' )	} ]
 				]
 			]
 		]

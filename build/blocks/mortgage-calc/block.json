@@ -1,6 +1,6 @@
 {
   "apiVersion": 3,
-  "name": "bigup-blocks/mortgage-calc",
+  "name": "utility-blocks/mortgage-calc",
   "version": "0.0.1",
   "title": "Mortgage Calculator",
   "category": "widgets",
@@ -11,7 +11,7 @@
     "calculator",
     "finance"
   ],
-  "textdomain": "bigup-blocks",
+  "textdomain": "utility-blocks",
   "editorScript": "file:./mortgage-calc.js",
   "viewScript": "file:./mortgage-calc-view.js",
   "editorStyle": "file:./mortgage-calc-editor.css",

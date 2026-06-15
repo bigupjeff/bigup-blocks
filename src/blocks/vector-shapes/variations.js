@@ -4,7 +4,7 @@ import { Logo } from './svg'
 const Variations = [
 	{
 		name: 'wave',
-		title: __( 'Wave', 'bigup-blocks' ),
+		title: __( 'Wave', 'utility-blocks' ),
 		icon: Logo,
 		attributes: {
 			'variation': 'wave'
@@ -15,7 +15,7 @@ const Variations = [
 	},
 	{
 		name: 'squiggle',
-		title: __( 'Squiggle', 'bigup-blocks' ),
+		title: __( 'Squiggle', 'utility-blocks' ),
 		icon: Logo,
 		attributes: {
 			'variation': 'squiggle'

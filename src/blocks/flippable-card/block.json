@@ -1,6 +1,6 @@
 {
 	"apiVersion": 3,
-	"name": "bigup-blocks/flippable-card",
+	"name": "utility-blocks/flippable-card",
 	"version": "0.0.1",
 	"title": "Flippable Card",
 	"category": "theme",
@@ -10,7 +10,7 @@
 		"container",
 		"card"
 	],
-	"textdomain": "bigup-blocks",
+	"textdomain": "utility-blocks",
 	"editorScript": "file:./flippable-card.js",
 	"viewScript": "file:./flippable-card-view.js",
 	"style": "file:./flippable-card.css",

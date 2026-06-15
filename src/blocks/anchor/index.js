@@ -26,7 +26,7 @@ import Example from './example';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType('bigup-blocks/anchor', {
+registerBlockType('utility-blocks/anchor', {
 	/**
 	 * @see ./edit.js
 	 */

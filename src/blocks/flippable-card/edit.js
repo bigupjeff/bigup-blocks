@@ -24,7 +24,7 @@ const template = [
 			layout: { type: 'constrained' }
 		},
 		[
-			[ 'core/paragraph', { content: __( "Some awesome summary of the thing being shouted about!", 'bigup-blocks' ) } ]
+			[ 'core/paragraph', { content: __( "Some awesome summary of the thing being shouted about!", 'utility-blocks' ) } ]
 		]
 	]
 ]
@@ -38,27 +38,27 @@ export default function Edit( { attributes, setAttributes } ) {
 	const blockProps = useBlockProps( {
         className: animate ? 'flippable' : '',
     } )
-	const titlePlaceholder   = __( 'Enter a Title', 'bigup-blocks' )
-	const taglinePlaceholder = __( 'Enter a tagline', 'bigup-blocks' )
+	const titlePlaceholder   = __( 'Enter a Title', 'utility-blocks' )
+	const taglinePlaceholder = __( 'Enter a tagline', 'utility-blocks' )
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Flippable Card Settings', 'bigup-blocks' ) }>
+				<PanelBody title={ __( 'Flippable Card Settings', 'utility-blocks' ) }>
 					<TextControl
-						label={ __( 'Title', 'bigup-blocks' ) }
+						label={ __( 'Title', 'utility-blocks' ) }
 						value={ title }
 						placeholder={ titlePlaceholder }
 						onChange={ ( newTitle ) => setAttributes( { title: newTitle } )  }
 					/>
 					<TextControl
-						label={ __( 'Tagline', 'bigup-blocks' ) }
+						label={ __( 'Tagline', 'utility-blocks' ) }
 						value={ tagline }
 						placeholder={ taglinePlaceholder }
 						onChange={ ( newTagline ) => setAttributes( { tagline: newTagline } )  }
 					/>
 					<ToggleControl
-						label={ __( 'Enable animation', 'bigup-blocks' ) }
+						label={ __( 'Enable animation', 'utility-blocks' ) }
 						help={ animate ? 'Yes' : 'No' }
 						checked={ animate }
 						onChange={ ( newAnimate ) => setAttributes( { animate: newAnimate } ) }

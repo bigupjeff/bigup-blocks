@@ -1,6 +1,6 @@
 {
 	"apiVersion": 3,
-	"name": "bigup-blocks/hero-punch",
+	"name": "utility-blocks/hero-punch",
 	"version": "0.0.1",
 	"title": "Hero Punch",
 	"category": "theme",
@@ -11,7 +11,7 @@
 		"hero",
 		"full width"
 	],
-	"textdomain": "bigup-blocks",
+	"textdomain": "utility-blocks",
 	"editorScript": "file:./hero-punch.js",
 	"viewScript": "file:./hero-punch-view.js",
 	"style": "file:./hero-punch.css",

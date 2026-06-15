@@ -58,9 +58,9 @@ export default function Edit( props ) {
 				<Panel>
 					<PanelBody>
 						<SelectControl
-						label={ __( 'Select vector', 'bigup-blocks' ) }
+						label={ __( 'Select vector', 'utility-blocks' ) }
 						labelPosition="top"
-						title={ __( 'Select vector', 'bigup-blocks' ) }
+						title={ __( 'Select vector', 'utility-blocks' ) }
 						value={ variation }
 						options={ variationOptions }
 						onChange={ ( value ) => setAttributes( { variation: value } ) }
@@ -70,16 +70,16 @@ export default function Edit( props ) {
 				</Panel>
 				<Panel>
 					<PanelBody
-						title={ __( 'Colours', 'bigup-blocks' ) }
+						title={ __( 'Colours', 'utility-blocks' ) }
 						initialOpen={ true }
 					>
-						<PanelRow>{ __( 'Top', 'bigup-blocks' ) }</PanelRow>
+						<PanelRow>{ __( 'Top', 'utility-blocks' ) }</PanelRow>
 						<ColorPalette
 							value={ topColour }
 							colors={ [ ...useSettings( 'color.palette' ) ] }
 							onChange={ ( value ) => setAttributes( { topColour: value } ) }
 						/>
-						<PanelRow>{ __( 'Bottom', 'bigup-blocks' ) }</PanelRow>
+						<PanelRow>{ __( 'Bottom', 'utility-blocks' ) }</PanelRow>
 						<ColorPalette
 							value={ bottomColour }
 							colors={ [ ...useSettings( 'color.palette' ) ] }
@@ -89,22 +89,22 @@ export default function Edit( props ) {
 				</Panel>
 				<Panel>
 					<PanelBody
-						title={ __( 'Line Settings', 'bigup-blocks' ) }
+						title={ __( 'Line Settings', 'utility-blocks' ) }
 						initialOpen={ true }
 					>
 						<ToggleControl
 							label='Show Line'
-							help={ lineVisible ? __( 'Yes', 'bigup-blocks' ) : __( 'No', 'bigup-blocks' ) }
+							help={ lineVisible ? __( 'Yes', 'utility-blocks' ) : __( 'No', 'utility-blocks' ) }
 							checked={ lineVisible === 'visible' ? true : false }
 							onChange={ ( value ) => setAttributes( { lineVisible: value ? 'visible' : 'hidden' } ) }
 						/>
-						<PanelRow>{ __( 'Width', 'bigup-blocks' ) }</PanelRow>
+						<PanelRow>{ __( 'Width', 'utility-blocks' ) }</PanelRow>
 						<UnitControl
 							value={ lineWidth }
 							onChange={ ( value ) => setAttributes( { lineWidth: value } ) }
 							__next40pxDefaultSize
 						/>
-						<PanelRow>{ __( 'Colour', 'bigup-blocks' ) }</PanelRow>
+						<PanelRow>{ __( 'Colour', 'utility-blocks' ) }</PanelRow>
 						<ColorPalette
 							value={ lineColor }
 							colors={ [ ...useSettings( 'color.palette' ) ] }

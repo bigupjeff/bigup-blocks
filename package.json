@@ -1,7 +1,7 @@
 {
-	"name": "bigup-blocks",
+	"name": "utility-blocks",
 	"version": "0.0.2",
-	"description": "A collection of Gutenberg blocks.",
+	"description": "A collection of useful Gutenberg blocks to extend WordPress editing capabilities.",
 	"dependencies": {
 		"@wordpress/block-editor": "^14.16.0",
 		"@wordpress/blocks": "^14.10.0",

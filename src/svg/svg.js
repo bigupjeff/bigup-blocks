@@ -2,7 +2,7 @@
  * Webpack entry point.
  */
 
-import { ReactComponent as Logo } from './bigup-logo.svg'
+import { ReactComponent as Logo } from './webguyjeff-logo.svg'
 export {
 	Logo
 }

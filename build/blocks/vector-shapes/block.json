@@ -1,6 +1,6 @@
 {
   "apiVersion": 3,
-  "name": "bigup-blocks/vector-shapes",
+  "name": "utility-blocks/vector-shapes",
   "version": "0.0.1",
   "title": "Vector Shapes",
   "category": "design",
@@ -12,7 +12,7 @@
     "vector",
     "shape"
   ],
-  "textdomain": "bigup-blocks",
+  "textdomain": "utility-blocks",
   "editorScript": "file:./vector-shapes.js",
   "editorStyle": "file:./vector-shapes-editor.css",
   "style": "file:./vector-shapes.css",

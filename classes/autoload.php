@@ -1,38 +1,68 @@
 <?php
 /**
- * Bigup Blocks - Class Autoloader
+ * Web Guy Jeff - Class autoload by namesapce.
  *
- * @package bigup-blocks;
- * @author Jefferson Real <me@jeffersonreal.uk>
- * @copyright Copyright (c) 2023, Jefferson Real
- * @license GPL3+
- * @link https://jeffersonreal.uk
- * @param string $class The fully-qualified class name.
+ * Sub-directories are searched recursively.
+ * Classes are denoted by the suffix .class.php.
+ *
+ * @param string $full_classname A fully-qualified class name e.g. 'Brand\\Project\\Class'.
+ * @param string $namespace The namespace e.g. 'Brand\\Project\\'.
+ * @param string $root Directory to recursively search.
  */
+
 spl_autoload_register(
-	function( $class ) {
+	function ( $full_classname ) use ( $namespace, $root ) {
 
-		$namespace       = 'BigupWeb\\Bigup_Blocks\\';
-		$classes_dir     = dirname( __FILE__ );
-		$filename_prefix = 'class-';
-
-		// does the class use the namespace prefix?
-		$namespace_length = strlen( $namespace );
-		if ( strncmp( $namespace, $class, $namespace_length ) !== 0 ) {
+		if ( strpos( $full_classname, $namespace ) !== 0 ) {
 			return;
 		}
 
-		$relative_classname = substr( $class, $namespace_length );
-		$classname          = array_reverse( explode( '\\', $class ) )[0];
-		$sub_namespace      = str_replace( $classname, '', $relative_classname );
+		$requested = substr( $full_classname, strlen( $namespace ) );
+		$requested = strtolower( str_replace( '_', '-', ltrim( $requested, '\\' ) ) ) . '.class.php';
 
-		$filename       = str_replace( '\\', DIRECTORY_SEPARATOR, $sub_namespace . DIRECTORY_SEPARATOR . $filename_prefix . $classname . '.php' );
-		$class_filepath = strtolower( $classes_dir . str_replace( '_', '-', $filename ) );
+		/*
+		 * Build class maps once per request to avoid recursively walking the filesystem for every
+		 * class load. The fqcn map is collision-safe across subdirectories that contain files with
+		 * the same basename.
+		 */
+		static $fqcn_map = null;
+		static $file_map = null;
+		if ( null === $fqcn_map ) {
+			$fqcn_map = array();
+			$file_map = array();
 
-		if ( file_exists( $class_filepath ) ) {
-			require $class_filepath;
-		} else {
-			error_log( $namespace . ' autoload error: file not found: ' . $class_filepath );
+			foreach ( new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $root ) ) as $file ) {
+				if ( ! $file->isFile() || ! str_ends_with( $file->getFilename(), '.class.php' ) ) {
+					continue;
+				}
+
+				$path = $file->getPathname();
+				$name = $file->getFilename();
+
+				// Backward-compatible fallback map for legacy flat naming.
+				if ( ! isset( $file_map[ $name ] ) ) {
+					$file_map[ $name ] = $path;
+				}
+
+				/*
+				 * Canonical map key is derived from relative path.
+				 * Example: classes/api/foo.class.php => Api\Foo => api/foo.class.php key.
+				 */
+				$relative = substr( $path, strlen( $root ) );
+				$relative = str_replace( DIRECTORY_SEPARATOR, '/', $relative );
+				$relative = preg_replace( '/\.class\.php$/', '', $relative );
+				$relative = str_replace( array( '/', '-' ), array( '_', '_' ), $relative );
+				$fqcn_map[ strtolower( str_replace( '_', '-', $relative ) ) . '.class.php' ] = $path;
+			}
+		}
+
+		if ( isset( $fqcn_map[ $requested ] ) ) {
+			include_once $fqcn_map[ $requested ];
+			return;
+		}
+
+		if ( isset( $file_map[ $requested ] ) ) {
+			include_once $file_map[ $requested ];
 		}
 	}
 );

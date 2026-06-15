@@ -61,7 +61,7 @@ export default function Edit( {
 		<>
 			<InspectorControls>
 				<PanelBody
-					title={ __( 'Anchor Settings', 'bigup-blocks' ) }
+					title={ __( 'Anchor Settings', 'utility-blocks' ) }
 					initialOpen={true}
 				>
 					<PanelRow>
@@ -114,7 +114,7 @@ export default function Edit( {
 					>
 						{ !hasInnerBlocks() && (
 							<span className="emptyWarning">
-								{ __("Empty anchor block!", 'bigup-blocks' ) }
+								{ __("Empty anchor block!", 'utility-blocks' ) }
 							</span>
 						) }
 						<InnerBlocks />
